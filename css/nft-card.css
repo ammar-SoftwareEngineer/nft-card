@@ -91,7 +91,7 @@ header::after{
 }
 
  header:hover::after{
-background-image: url('/projects3/images/icon-view.svg');
+background-image: url('../images/icon-view.svg');
     background-repeat: no-repeat;
     background-position: 50%;
     z-index: 1;
