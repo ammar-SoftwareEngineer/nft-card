@@ -57,11 +57,10 @@ body {
 
 /* start card */
 .card {
-    position: relative;
-  padding: 20px;
+    padding: 20px;
     border-radius: 10px;
     background-color: hsl(216, 50%, 16%);
-    
+
 }
 
 .card .container {
@@ -69,43 +68,48 @@ body {
 }
 
 .card header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
- header img{
+header img {
     width: 300px;
     height: 300px;
     z-index: 1;
     border-radius: 10px;
 }
 
-header::after{
-    content: "";
+header .ovarly{
     position: absolute;
+    border-radius: 12px;
+    width: 300px;
+    height: 300px;
     background-color: hsl(178, 100%, 50%);
-    width: 298px;
-    height: 299px;
-    border-radius: 10px;
+    z-index: 1;
 }
 
- header:hover::after{
-background-image: url('../images/icon-view.svg');
+header .ovarly:hover{
+    background-image: url('../images/icon-view.svg');
     background-repeat: no-repeat;
     background-position: 50%;
-    z-index: 1;
-opacity: 0.7;
+    opacity: 0.7;
+    z-index: 2;
     cursor: pointer;
 }
+header img:hover{
+    cursor: pointer;
+    z-index: -1;
+}
 
-@media(max-width:375px){
-    .card{
-    width: 90%;
+@media(max-width:375px) {
+    .card {
+        width: 90%;
     }
 
 
 }
+
 /* end card */
 
 /* start name card  */
@@ -131,29 +135,32 @@ opacity: 0.7;
     width: 300px;
     color: var(--main-color);
 }
-@media (max-width:767px){
-    .name-card{
+
+@media (max-width:767px) {
+    .name-card {
         margin-left: -30px;
     }
-    .name-card p{
-    
+
+    .name-card p {
+
         font-size: 16px;
     }
 }
+
 /* end name card  */
 
 /* start center card */
 .center-card {
     margin-top: 30px;
     position: relative;
-    
+
 }
 
 .center-card .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
 .center-card .one {
@@ -188,15 +195,18 @@ opacity: 0.7;
     top: 30px;
     width: 100%;
 }
-@media(max-width:767px){
+
+@media(max-width:767px) {
     .center-card {
         padding: 20p;
     }
-    .center-card .two{
-      position: absolute;
-      right: 80px;
+
+    .center-card .two {
+        position: absolute;
+        right: 80px;
     }
 }
+
 /* end center card */
 /* start footer card */
 .footer-card {
